@@ -1,0 +1,74 @@
+<form id="form" ng-controller="form">
+  <div class="icon-thread">
+    <div>
+      <fieldset id="aliment">
+        <legend>Type d'aliment</legend>
+        <ul>
+          <li class="form-icon">
+            <input type="radio" name="typeAliment" id="croquettes" value="croquettes" title="Croquettes" ng-model="selectedTypeRepas" ng-change="updateFilteredFood('croquettes')">
+            <label for="croquettes"><i class="fa-solid fa-bowl-rice"></i></label>
+          </li>
+          <li class="form-icon">
+            <input type="radio" name="typeAliment" id="patee" value="patee" title="Patée" ng-model="selectedTypeRepas" ng-change="updateFilteredFood('patee')">
+            <label for="patee"><i class="fa-solid fa-bowl-food"></i></label>
+          </li>
+          <li class="form-icon">
+            <input type="radio" name="typeAliment" id="friandise" value="friandise" title="Friandise" ng-model="selectedTypeRepas" ng-change="updateFilteredFood('friandise')">
+            <label for="friandise"><i class="fa-solid fa-bone"></i></label>
+          </li>
+          <li class="form-icon">
+            <input type="radio" name="typeAliment" id="eau" value="eau" title="Eau" ng-model="selectedTypeRepas" ng-change="updateFilteredFood('eau')">
+            <label for="eau"><i class="fa-solid fa-droplet"></i></label>
+          </li>
+          <li class="form-icon">
+            <input type="radio" name="typeAliment" id="complement" value="complement" title="Complément" ng-model="selectedTypeRepas" ng-change="updateFilteredFood('complement')">
+            <label for="complement"><i class="fa-solid fa-pills"></i></label>
+          </li>
+          <li class="form-icon">
+            <input type="radio" name="typeAliment" id="medicament" value="medicament" title="Médicament" ng-model="selectedTypeRepas" ng-change="updateFilteredFood('medicament')">
+            <label for="medicament"><i class="fa-solid fa-syringe"></i></label>
+          </li>
+        </ul>
+      </fieldset>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="input-data">
+      <select name="nom-aliment" ng-model="selectedFood" ng-options="item as item.name for item in filteredFood" required ng-disabled="!selectedTypeRepas">
+        <option value="" disabled selected hidden></option>
+      </select>
+      <div class="underline"></div>
+      <label for="nom-aliment">Nom de l'aliment</label>
+    </div>
+
+  </div>
+  <div class="form-row">
+    <div class="input-data">
+        <input name="quantite" id="quantite" type="number" required>    
+        <div class="underline"></div>
+        <label for="quantite">Quantité</label>
+    </div>
+    <div class="input-data">
+      <select name="unite" ng-model="selectedUnit" ng-options="unit.value as unit.label for unit in getUnitsForType(selectedTypeRepas)" required ng-disabled="!selectedTypeRepas">
+        <option value="" disabled selected hidden></option>
+      </select>
+      <div class="underline"></div>
+      <label for="unite">Unité</label>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="input-data">
+        <input name="dateheure" id="dateheure" type="datetime-local" required>    
+        <div class="underline"></div>
+        <label for="dateheure">Date et heure</label>
+    </div>
+  </div>
+  <div class="form-row d-none">
+    <div class="input-data">
+      <input type="hidden" id="dateHeureActuelle">
+    </div>
+  </div>
+  <div class="form-row">
+    <button type="submit" class="button" style="--color: #3498db;" ng-click="submitForm()">Envoyer</button>
+</div>
+</form>

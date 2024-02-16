@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mon journal de bord</title>
+
+    <!-- LIBRARIES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"></script>
+    <script src="https://code.angularjs.org/1.7.8/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.7.8/angular-route.min.js"></script>
+    <script src="https://code.angularjs.org/1.7.8/angular-resource.min.js"></script>
+    <script src="https://code.angularjs.org/1.7.8/angular-sanitize.min.js"></script>
+    <!-- JavaScript Bundle with jsDeliver -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <!-- STYLE / THEME -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="view/css/style.css" rel="stylesheet" />
+
+    
+  </head>
+
+  <body>
+    <div class="container" ng-view></div>
+    <!-- THIS APP. -->
+    <script src="controller/services.js"></script>
+    <script src="controller/directives.js"></script>
+    <script src="controller/filters.js"></script>
+    <script src="controller/controllers.js"></script>
+    <script src="App.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "applicationName" : "Mon journal de bord",
+    "dogName" : "Tequila",
+    "birthDate" : "30/05/2010",
+    "dogRace" : "Berger Belge Malinois",
+    "food" : [
+        {"name" : "toto", "typeRepas" : "croquettes"},
+        {"name" : "toto2", "typeRepas" : "croquettes"}, 
+        {"name" : "Eau", "typeRepas" : "eau"}, 
+        {"name" : "Lilys", "typeRepas" : "patee"}, 
+        {"name" : "Lilysfri", "typeRepas" : "friandise"}, 
+        {"name" : "med", "typeRepas" : "medicament"}, 
+        {"name" : "med2", "typeRepas" : "medicament"},
+        {"name" : "compl", "typeRepas" : "complement"},
+        {"name" : "compl2", "typeRepas" : "complement"}   
+        
+    ]
+}
