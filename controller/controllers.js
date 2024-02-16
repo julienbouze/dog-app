@@ -43,20 +43,25 @@
 
     $scope.submitForm = function () {
       var typeRepas = $scope.selectedTypeRepas;
-      var typeAliment = $scope.selectedFood.name;
+      var aliment = $scope.selectedFood.name;
+      var quantite = $scope.quantite;
       var unite = $scope.selectedUnit;
-
+      var dateheure = $scope.dateheure;
+    
+      var formData = {
+        typeRepas: typeRepas,
+        aliment: aliment,
+        quantite: quantite,
+        unite: unite,
+        dateheure: dateheure
+      };
+    
       $http({
         method: 'POST',
-        url: 'data/data.json',
-        data: {
-          typeRepas: typeRepas,
-          typeAliment: typeAliment,
-          unite: unite
-        }
+        url: '/saveFormData.php', // Remplacez ceci par l'URL correcte de votre serveur
+        data: formData
       }).then(function successCallback(response) {
         console.log('Données enregistrées avec succès:', response.data);
-
         window.location.reload();
       }, function errorCallback(response) {
         console.error('Erreur lors de l\'enregistrement des données:', response.status);

@@ -1,3 +1,30 @@
-{
-    
-}
+[
+    {
+        "typeRepas": "croquettes",
+        "typeAliment": "toto",
+        "unite": "g"
+    },
+    {
+        "typeRepas": "friandise",
+        "typeAliment": "Lilysfri",
+        "unite": "g"
+    },
+    {
+        "typeRepas": "friandise",
+        "aliment": "Lilysfri",
+        "unite": "g"
+    },
+    {
+        "typeRepas": "medicament",
+        "aliment": "med",
+        "quantite": 47,
+        "unite": "ml"
+    },
+    {
+        "typeRepas": "patee",
+        "aliment": "Lilys",
+        "quantite": 25,
+        "unite": "g",
+        "dateheure": "2024-02-16T15:38:00.000Z"
+    }
+]
